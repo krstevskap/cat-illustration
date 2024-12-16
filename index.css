@@ -3,7 +3,7 @@
     --secondary: linear-gradient(0deg, rgba(145, 23, 148, 1) 0%, rgba(211, 71, 61, 1) 100%);
     --gradient: linear-gradient(0deg, rgba(42, 4, 52, 1) 0%, rgba(76, 19, 90, 1) 100%);
     --icon: #FEDF77;
-    --shadow: #FEDF77ab;
+    --shadow: #FEDF77;
     --black: #010000;
     --dark-blue: #0e0f1d;
 }
@@ -12,7 +12,7 @@
     --secondary: linear-gradient(180deg, rgb(1, 25, 51) 0%, rgb(83, 150, 238) 100%);
     --gradient: linear-gradient(0deg, rgba(2, 34, 68, 1) 0%, rgb(37, 81, 137) 100%);
     --icon: #FCFFF7;
-    --shadow: #fcfff7ab;
+    --shadow: #dddddd;
     --primary: #191B34;
 }
 
@@ -58,10 +58,6 @@
 
 .moon {
     z-index: 3;
-}
-
-.moon,
-.moon-shadow {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -74,8 +70,37 @@
 }
 
 .moon-shadow {
-    box-shadow: 0 0 20px 20px var(--shadow);
     z-index: 2;
+}
+
+.moon-detail-1,
+.moon-detail-2,
+.moon-detail-3 {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    background-color: var(--shadow);
+}
+
+.moon-detail-1 {
+    width: 5px;
+    height: 5px;
+    top: 100px;
+    left: 52%;
+}
+
+.moon-detail-2 {
+    width: 7px;
+    height: 7px;
+    top: 110px;
+    left: 54%;
+}
+
+.moon-detail-3 {
+    width: 4px;
+    height: 4px;
+    top: 110px;
+    left: 50%;
 }
 
 .building-1,
