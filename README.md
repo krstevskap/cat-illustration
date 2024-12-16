@@ -11,14 +11,16 @@
 
 To view the project locally, follow these steps:
 
-**1. Clone the repository.**
+**1. Clone the repository**
 
-**2. Navigate to the project folder.**
+**2. Navigate to the project folder**
 
-**3. Open the index.html file in your browser to view the project.**
+**3. Open the index.html file in your browser to view the project**
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
+
+![App Demo](./demo.gif)
