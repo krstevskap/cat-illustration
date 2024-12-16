@@ -1,15 +1,26 @@
 :root {
-    --white: #ffffff;
-    --primary: #191B34;
+    --primary: #efefef;
+    --secondary: linear-gradient(0deg, rgba(145, 23, 148, 1) 0%, rgba(211, 71, 61, 1) 100%);
+    --gradient: linear-gradient(0deg, rgba(42, 4, 52, 1) 0%, rgba(76, 19, 90, 1) 100%);
+    --icon: #FEDF77;
+    --shadow: #FEDF77ab;
+    --black: #010000;
+    --dark-blue: #0e0f1d;
+}
+
+.dark-mode {
     --secondary: linear-gradient(180deg, rgb(1, 25, 51) 0%, rgb(83, 150, 238) 100%);
     --gradient: linear-gradient(0deg, rgba(2, 34, 68, 1) 0%, rgb(37, 81, 137) 100%);
-    --black: #010000;
+    --icon: #FCFFF7;
+    --shadow: #fcfff7ab;
+    --primary: #191B34;
 }
 
 * {
     padding: 0;
     margin: 0;
     background-color: var(--primary);
+    transition: background-color 1.5s;
 }
 
 .container {
@@ -18,21 +29,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.top-container {
+    position: relative;
 }
 
 .window {
     width: 300px;
     height: 500px;
-    background: var(--secondary);
     position: relative;
     z-index: 1;
+    background: var(--secondary);
 }
 
 .window-frame {
     position: absolute;
-    background-color: #0e0f1d;
     width: 330px;
     height: 530px;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    background-color: var(--dark-blue);
 }
 
 .moon {
@@ -47,12 +68,13 @@
     border-radius: 50%;
     left: 50%;
     top: 90px;
-    background-color: #FCFFF7;
+    background-color: var(--icon);
     transform: translateX(-50%);
+    transition: background-color 1s;
 }
 
 .moon-shadow {
-    box-shadow: 0 0 20px 20px #fcfff7ab;
+    box-shadow: 0 0 20px 20px var(--shadow);
     z-index: 2;
 }
 
@@ -193,4 +215,19 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: var(--black);
+}
+
+button {
+    padding: 1em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button svg {
+    background: transparent;
 }
